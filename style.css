@@ -1,0 +1,9 @@
+#container{
+    display: flex;
+}
+
+.cellStyle{
+    padding: 10px;
+    background-color: yellow;
+}
+
