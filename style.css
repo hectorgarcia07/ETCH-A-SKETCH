@@ -1,9 +1,39 @@
 #container{
     display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+#etchBody{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: 35px solid rgb(255, 93, 93);
+}
+#etchBody{
+    background-color: rgb(255, 93, 93);
+}
+#etchBox{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 350px;
+    height: 350px;
+}
+#title{
+    font-family: 'Galada', cursive;
+    font-size: 3em;
+    margin: 0px 0px;
+    background-color: rgb(255, 93, 93);
+    color: white;
+}
+.column-style{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 .cellStyle{
-    padding: 10px;
-    background-color: yellow;
+    flex-grow: 1;
+    padding: 1px;
+    background-color: white;
 }
 

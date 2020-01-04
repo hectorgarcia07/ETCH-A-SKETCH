@@ -1,10 +1,11 @@
-var parent = document.getElementById("container");
-var number = 16;
+var parent = document.getElementById("etchBox");
+var number = 100;
 
 //create row column of divs
 for(let i = 0; i < number; i++)
 {
     let row = document.createElement("div");
+    row.className = "column-style";
     for(let j = 0; j < number; j++)
     {
         let items = document.createElement("div");
