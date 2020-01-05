@@ -1,3 +1,4 @@
+
 #container{
     display: flex;
     flex-flow: column nowrap;
@@ -8,12 +9,12 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    border: 35px solid rgb(255, 93, 93);
-
-}
-#etchBody{
+    border-left: 65px solid rgb(255, 93, 93);
+    border-right: 65px solid rgb(255, 93, 93);
+    border-top: 14px solid rgb(255, 93, 93);
     background-color: rgb(255, 93, 93);
 }
+
 #etchBox{
     display: flex;
     flex-flow: column nowrap;
@@ -22,10 +23,10 @@
 }
 #title{
     font-family: 'Galada', cursive;
-    font-size: 3em;
+    font-size: 4em;
     margin: 0px 0px;
     background-color: rgb(255, 93, 93);
-    color: white;
+    color: rgb(255, 237, 134);
 }
 .column-style{
     display: flex;
@@ -38,4 +39,22 @@
     padding: 1px;
     background-color: white;
 }
+#circleStyle{
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+    background-color: rgb(255, 93, 93);
+    padding-bottom: 5px;
+}
+.circle{
+    background-color: white;
+    border-radius: 50%;
+    padding: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
+#menu{
+    display: flex;
+    
+}
