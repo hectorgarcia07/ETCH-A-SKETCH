@@ -18,9 +18,17 @@
                 <div class="circle"></div>
             </div>
             <div id="menu">
-                <div><button type="button" id="reset">Reset</button></div>
-                <div>Resolution: <span></span></div>
-                <div>Pixel Color: <div></div></div>
+                <div id="reset">Reset</div>
+                <div>Resolution: <span id=resolution></span></div>
+                <div>Pixel Color: <span id="pixelColor"></span></div>
+                <div>
+                    <select name="color" onChange="getSelectedOption()" id="colorStyle">
+                        <option value="default">default</option>
+                        <option value="greyscale">greyscale</option>
+                        <option value="rainbow">rainbow</option>
+                        <option value="pickColor">Pick a color</option>
+                    </select>
+                </div>
             </div>
         </div>
     </body>

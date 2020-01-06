@@ -55,6 +55,23 @@
 }
 
 #menu{
+    margin-top: 10px;
     display: flex;
-    
+    width: 480px;
+    justify-content: space-evenly;
+    font-family: 'Galada', cursive;
+}
+
+#pixelColor{
+    padding: 0px 15px;
+}
+
+#reset{
+    font-family: 'Galada', cursive;
+    border: 1px solid black;
+    padding: 1px 5px;
+}
+
+#reset:hover{
+    cursor: pointer;
 }
