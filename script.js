@@ -3,9 +3,8 @@ var number = 5;
 var resetButton = document.getElementById("reset");
 var resolution = document.getElementById("resolution");
 var pixelColor = document.getElementById("pixelColor");
-var rgbColor = "rgb(0,0,255)";
+var rgbColor = "rgb(0, 0, 0)";
 var colorStyle = document.getElementById("colorStyle");
-var passCount = 0;
 
 //if button clicked, reset and prompt the user for 
 //a new resolution
@@ -67,6 +66,9 @@ function drawScreen(){
             let items = document.createElement("div");
             items.className = "cellStyle";
             items.addEventListener("mouseover", () => {
+                let currTile = window.getComputedStyle(items);
+                let currStyle = currTile.getPropertyValue("color");
+                getSelectedOption(currStyle);
                 items.style.backgroundColor = rgbColor;
             });
             row.appendChild(items);
@@ -87,19 +89,33 @@ function updatePixelColor(){
 }
 
 //will change the pixel color based on user selection
-function getSelectedOption(){
+function getSelectedOption(currStyle){
     colorPixle = colorStyle.options[colorStyle.selectedIndex].value;
     if(colorPixle === "default")
-        rgbColor = "rgb(0,0,0)";
+    {
+        rgbColor = "rgb(0, 0, 0)";
+        passCount = 0;
+    }
     else if(colorPixle === "greyscale")
     {
-        if (passCount < 10)
+        rgbArr = getRGBArray(currStyle);
+        if(rgbArr[0] != 255 || rgbArr[1] != 255 || rgbArr[2] != 255 )
         {
-            rgbColor = "rgb(" + 25 * passCount +","+ 25 * passCount + "," + 25 * passCount + ")";
-            passCount++;
+            
         }
     }
 }
+
+//get rgb in index form
+function getRGBArray(rbgStr){
+    return rgb.replace(/[^\d,]/g, '').split(',');
+}
+
+function setGreyScale(currStyle)
+{
+    
+}
+
 
 //draw the screen when page is reloaded with default size
 //as well as display resolution and pixel color used when hover
