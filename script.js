@@ -127,7 +127,6 @@ Cell.prototype.mouseover = function(obj){
     }
     else if(colorPixle === "rainbow")
     {
-        isGreyScale = false;//turns greyscale off just in case
         this.element.style.backgroundColor = random_rgb();
         //if the greyscale has been changed, reset all passes
         //from the pixel to 0
